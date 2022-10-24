@@ -1,3 +1,5 @@
+#pls install ctypes and rust as dependencies
+
 import ctypes
 
 rust = ctypes.CDLL("target/release/librust_lib.so")
