@@ -81,15 +81,26 @@ up1 = [
         ]
 
 up2 = [
-e,e,e,e,e,e,e,e,
-e,p,e,e,e,e,e,e,
-e,p,e,e,p,e,p,e,
-e,p,g,g,p,y,y,e,
-e,g,g,g,y,w,y,g,
-e,g,g,g,g,y,y,e,
-e,e,g,e,g,e,e,e,
-e,e,e,e,e,e,e,e,
+        r,b,r,b,b,b,b,b,
+        r,b,r,b,b,b,g,g,
+        b,b,b,b,b,b,g,g,
+        r,b,r,b,b,g,g,g,
+        b,b,b,b,b,g,b,g,
+        b,b,b,g,b,g,w,g
+        b,b,g,g,w,g,g,g,
+        b,b,g,g,g,g,g,g
 ]
+
+up3 = [
+        b,b,b,b,b,b,b,b,
+        b,b,b,b,b,b,b,b,
+        b,b,g,g,g,g,b,b,
+        b,g,w,g,g,w,g,b,
+        b,g,b,g,g,b,g,b,
+        b,g,g,g,g,l,g,b,
+        g,g,g,g,g,g,g,g,
+        g,g,g,g,g,g,g,g
+        ]
 
 #######################
 ### Left Animations ###
