@@ -3,7 +3,7 @@
 #################
 
 import pygame
-from pygame.locals import *
+from pygame import *
 from sense_hat import SenseHat
 import time
 
