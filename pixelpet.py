@@ -86,7 +86,7 @@ up2 = [
         b,b,b,b,b,b,g,g,
         r,b,r,b,b,g,g,g,
         b,b,b,b,b,g,b,g,
-        b,b,b,g,b,g,w,g
+        b,b,b,g,b,g,w,g,
         b,b,g,g,w,g,g,g,
         b,b,g,g,g,g,g,g
 ]
