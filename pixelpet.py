@@ -27,6 +27,7 @@ r = (255, 0, 0) #red
 o = (255, 75, 75)
 y = (204, 204, 0) #yellow
 b = (0, 0, 0) #black
+e = (0, 0, 0) #empty
 
 #######################
 ### Down Animations ###
@@ -45,7 +46,8 @@ down1 = [
 
 down2 = [   
          b,b,b,b,b,b,b,b,                                                   
-         b,b,b,b,b,b,b,b,                             
+         b,b,b,b,b,b,b,b, 
+	 b,b,b,b,b,b,b,b,
          b,b,g,g,g,g,b,b,                                          
          b,b,b,b,b,b,b,b,
          g,p,g,g,g,g,p,g,                                                  
@@ -192,9 +194,9 @@ while running:
 
             if event.key == K_RIGHT:
 		sense.clear()
-                sense.set_pixels(move_right1)
+                sense.set_pixels(right1)
                 time.sleep(0.5)
-                sense.set_pixels(move_right2)
+                sense.set_pixels(right2)
                 time.sleep(0.5)
 
         elif event.key == K_LEFT: 
