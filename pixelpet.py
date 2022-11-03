@@ -158,6 +158,28 @@ right1 = [
         r,o,o,o,o,o,o,o
 ]
 
+right2 = [
+	e,e,g,g,g,g,g,e,
+        e,g,e,g,g,e,g,e,
+        e,g,b,g,g,b,g,g,
+        e,g,g,g,g,g,g,e,
+        e,e,g,g,g,e,g,e,
+        o,e,g,g,r,e,e,e,
+        o,r,r,o,r,o,o,r,
+        r,o,o,o,r,o,r,o	
+]
+
+right3 = [
+	e,e,e,e,e,e,e,e,
+	e,e,e,e,e,e,e,e,
+	e,e,e,e,e,e,e,e,
+	e,e,e,g,g,e,e,e,
+	e,e,g,g,g,g,e,e,
+	r,g,g,g,g,r,g,e,
+	o,o,o,r,o,r,o,o,
+	r,o,o,o,r,r,o,r,
+]
+
 ################
 ### Curses?? ### 
 ################
@@ -169,7 +191,7 @@ while running:
         if event.type == KEYDOWN:
 
             if event.key == K_RIGHT:
-                sense.clear()
+		sense.clear()
                 sense.set_pixels(move_right1)
                 time.sleep(0.5)
                 sense.set_pixels(move_right2)
