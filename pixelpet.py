@@ -107,26 +107,55 @@ up3 = [
 #######################
 
 left1 = [
-e,e,e,e,e,e,e,e,
-e,e,e,e,e,e,e,p,
-p,e,p,e,e,e,p,e,
-p,y,p,y,g,g,p,e,
-e,g,w,y,g,g,g,e,
-e,y,y,g,g,g,g,e,
-e,e,g,e,g,e,g,e,
-e,e,e,e,e,e,e,e,
+        e,e,e,e,e,e,e,e,
+        e,e,e,e,e,e,e,e,
+        e,e,g,g,g,g,e,e,
+        e,e,g,w,g,w,g,e,
+        e,g,g,e,g,e,g,e,
+        e,g,g,g,g,g,g,e,
+        g,g,g,g,g,g,g,g,
+        g,g,g,g,g,g,g,g
 ]
 
 
 left2 = [
-e,e,e,e,e,e,e,e,
-e,e,e,e,e,e,p,e,
-e,p,e,p,e,e,p,e,
-e,y,p,y,g,g,p,e,
-e,g,w,y,g,g,g,e,
-e,y,y,g,g,g,g,e,
-e,e,e,g,e,g,e,e,
-e,e,e,e,e,e,e,e,
+        g,g,g,g,g,g,g,g,
+        e,g,g,g,g,g,g,g,
+        e,g,e,g,g,e,g,g,
+        e,e,g,g,g,g,e,e,
+        e,e,e,g,g,e,e,e,
+        e,e,e,e,e,e,e,e,
+        e,e,e,e,e,e,e,e,
+        e,e,e,e,e,e,e,e
+]
+        
+       
+left3 = [
+        e,y,e,e,e,e,y,e,
+        e,e,e,y,e,y,e,y,
+        y,e,g,g,g,g,e,e,
+        e,g,w,g,e,g,g,e,
+        e,g,e,g,w,g,g,e,
+        e,g,g,g,g,g,g,e
+        g,g,g,g,g,g,g,g,
+        g,g,g,g,g,g,g,g,
+]
+        
+        
+        
+########################
+### Right Animations ###
+########################
+        
+right1 = [
+        e,e,g,g,g,g,g,e,
+        e,g,e,g,g,e,g,e,
+        e,g,b,g,g,b,g,g,
+        e,g,g,g,g,g,g,e,
+        e,e,g,g,g,e,e,e,
+        r,b,b,b,b,r,b,b,
+        o,o,r,o,r,o,r,r,
+        r,o,o,o,o,o,o,o
 ]
 
 ################
