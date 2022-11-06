@@ -198,13 +198,17 @@ while running:
                 time.sleep(0.5)
                 sense.set_pixels(right2)
                 time.sleep(0.5)
+		sense.set_pixels(right3)
+		time.sleep(0.5)
 
         elif event.key == K_LEFT: 
                 sense.clear()
-                sense.set_pixels(move_left1)
+                sense.set_pixels(left1)
                 time.sleep(0.5)
-                sense.set_pixels(move_left2)
+                sense.set_pixels(left2)
                 time.sleep(0.5)
+		sense.set_pixels(left3)
+		time.sleep(0.5)
 
 
         if event.type == QUIT:
