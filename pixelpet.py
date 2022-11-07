@@ -192,23 +192,33 @@ while running:
     for event in pygame.event.get():
         if event.type == KEYDOWN:
 
-            if event.key == K_RIGHT:
-		sense.clear()
-                sense.set_pixels(right1)
-                time.sleep(0.5)
-                sense.set_pixels(right2)
-                time.sleep(0.5)
-		sense.set_pixels(right3)
-		time.sleep(0.5)
+             if event.key == K_RIGHT:
+			sense.clear();
+                	sense.set_pixels(right1)
+                	time.sleep(0.5)
+                	sense.set_pixels(right2)
+                	time.sleep(0.5)
+			sense.set_pixels(right3)
+			time.sleep(0.5)
 
-        elif event.key == K_LEFT: 
-                sense.clear()
-                sense.set_pixels(left1)
-                time.sleep(0.5)
-                sense.set_pixels(left2)
-                time.sleep(0.5)
-		sense.set_pixels(left3)
-		time.sleep(0.5)
+        	elif event.key == K_LEFT: 
+                	sense.clear()
+                	sense.set_pixels(left1)
+                	time.sleep(0.5)
+                	sense.set_pixels(left2)
+                	time.sleep(0.5)
+			sense.set_pixels(left3)
+			time.sleep(0.5)
+				
+		elif event.key == K_UP: 
+	       		sense.clear()
+               		sense.set_pixels(up1)
+               		time.sleep(0.5)
+               		sense.set_pixels(up2)
+               		time.sleep(0.5)
+			sense.set_pixels(up3)
+			time.sleep(0.5)
+
 
 
         if event.type == QUIT:
