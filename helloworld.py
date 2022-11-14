@@ -1,4 +1,4 @@
-#pls install ctypes and rust as dependencies
+#pls install ctypes and rust as dependencies & then cargo build the rust file & save it in somehwere like /usr/share or /usr/bin
 
 import ctypes
 
