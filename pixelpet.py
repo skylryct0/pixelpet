@@ -141,7 +141,7 @@ left3 = [
         e,g,e,g,w,g,g,e,
         e,g,g,g,g,g,g,e
         g,g,g,g,g,g,g,g,
-        g,g,g,g,g,g,g,g,
+        g,g,g,g,g,g,g,g
 ]
         
         
@@ -180,7 +180,7 @@ right3 = [
 	e,e,g,g,g,g,e,e,
 	r,g,g,g,g,r,g,e,
 	o,o,o,r,o,r,o,o,
-	r,o,o,o,r,r,o,r,
+	r,o,o,o,r,r,o,r
 ]
 
 ################
