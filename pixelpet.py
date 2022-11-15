@@ -27,6 +27,7 @@ r = (255, 0, 0) #red
 o = (255, 75, 75)
 y = (204, 204, 0) #yellow
 b = (0, 0, 0) #black
+#lord almighty forgive me for the extra var
 e = (0, 0, 0) #empty
 
 #######################
