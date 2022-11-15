@@ -3,7 +3,8 @@
 echo "Hello world. Today we are going to play a game of Russian Roulette. But first, I will tell you that I spare all linux and bsd users so if u use macOS then skill issue on ur part. pls do not run this as root."
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-        echo "hail the almighty tux, my fellow linux master race. you may pass"
+        aplay /dev/urandom;
+        echo "hail the almighty tux, my fellow linux master race. you may pass. enjoy kernel randomness music on ur way out."
         
 elif [[ "$OSTYPE" == "darwin"* ]]; then
        if $(( $RANDOM % 9 + 1 )) == 1; then
