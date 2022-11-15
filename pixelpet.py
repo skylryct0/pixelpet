@@ -6,6 +6,7 @@ import pygame
 from pygame import *
 from sense_hat import SenseHat
 import time
+import random
 
 ##################
 ### Initiation ###
@@ -27,7 +28,7 @@ r = (255, 0, 0) #red
 o = (255, 75, 75)
 y = (204, 204, 0) #yellow
 b = (0, 0, 0) #black
-#lord almighty forgive me for the extra var
+#lord almighty forgive me for the extra var ;-;
 e = (0, 0, 0) #empty
 
 #######################
@@ -182,6 +183,20 @@ right3 = [
 	o,o,o,r,o,r,o,o,
 	r,o,o,o,r,r,o,r
 ]
+#################
+### Easter Egg ##
+#################
+
+fun = [
+	e,e,e,e,e,e,e,e,
+	r,r,r,r,r,r,r,r,
+	o,o,o,o,o,o,o,o,
+	y,y,y,y,y,y,y,y,
+	g,g,g,g,g,g,g,g,
+	l,l,l,l,l,l,l,l,
+	p,p,p,p,p,p,p,p,
+	e,e,e,e,e,e,e,e
+]
 
 ################
 ### Curses?? ### 
@@ -194,6 +209,8 @@ while running:
         if event.type == KEYDOWN:
 
              if event.key == K_RIGHT:
+		num = random.randrange(0, 51)
+		if num == 3:
 			sense.clear();
                 	sense.set_pixels(right1)
                 	time.sleep(0.5)
@@ -201,27 +218,32 @@ while running:
                 	time.sleep(0.5)
 			sense.set_pixels(right3)
 			time.sleep(0.5)
+	
+		else:
+		sense.clear();
+                	sense.set_pixels(fun)
+			
 
-        	elif event.key == K_LEFT: 
-                	sense.clear()
-                	sense.set_pixels(left1)
-                	time.sleep(0.5)
-                	sense.set_pixels(left2)
-                	time.sleep(0.5)
-			sense.set_pixels(left3)
-			time.sleep(0.5)
+        elif event.key == K_LEFT: 
+                sense.clear()
+               	sense.set_pixels(left1)
+               	time.sleep(0.5)
+               	sense.set_pixels(left2)
+               	time.sleep(0.5)
+		sense.set_pixels(left3)
+		time.sleep(0.5)
 				
-		elif event.key == K_UP: 
-	       		sense.clear()
-               		sense.set_pixels(up1)
-               		time.sleep(0.5)
-               		sense.set_pixels(up2)
-               		time.sleep(0.5)
-			sense.set_pixels(up3)
-			time.sleep(0.5)
+	elif event.key == K_UP: 
+		sense.clear()
+		sense.set_pixels(up1)
+               	time.sleep(0.5)
+               	sense.set_pixels(up2)
+		time.sleep(0.5)
+		sense.set_pixels(up3)
+		time.sleep(0.5)
 
 
 
-        if event.type == QUIT:
-            running = False
-            print("CYA!!! <3")
+    if event.type == QUIT:
+        running = False
+	print("CYA!!! <3")
