@@ -1,3 +1,20 @@
+#Sky's Pixel Pet
+#Copyright (C) 2022 Skyler Sage T
+
+#This program is free software: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+
+#This program is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+
+#You should have received a copy of the GNU General Public License
+#along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
 #################
 ### Libraries ###
 #################
@@ -6,7 +23,7 @@ import pygame
 from pygame import *
 from sense_hat import SenseHat
 import time
-import random
+from random import random
 
 ##################
 ### Initiation ###
@@ -49,7 +66,7 @@ down1 = [
 down2 = [   
          b,b,b,b,b,b,b,b,                                                   
          b,b,b,b,b,b,b,b, 
-	 b,b,b,b,b,b,b,b,
+	       b,b,b,b,b,b,b,b,
          b,b,g,g,g,g,b,b,                                          
          b,b,b,b,b,b,b,b,
          g,p,g,g,g,g,p,g,                                                  
@@ -140,7 +157,7 @@ left3 = [
         y,e,g,g,g,g,e,e,
         e,g,w,g,e,g,g,e,
         e,g,e,g,w,g,g,e,
-        e,g,g,g,g,g,g,e
+        e,g,g,g,g,g,g,e,
         g,g,g,g,g,g,g,g,
         g,g,g,g,g,g,g,g
 ]
@@ -163,7 +180,7 @@ right1 = [
 ]
 
 right2 = [
-	e,e,g,g,g,g,g,e,
+	      e,e,g,g,g,g,g,e,
         e,g,e,g,g,e,g,e,
         e,g,b,g,g,b,g,g,
         e,g,g,g,g,g,g,e,
@@ -174,14 +191,14 @@ right2 = [
 ]
 
 right3 = [
-	e,e,e,e,e,e,e,e,
-	e,e,e,e,e,e,e,e,
-	e,e,e,e,e,e,e,e,
-	e,e,e,g,g,e,e,e,
-	e,e,g,g,g,g,e,e,
-	r,g,g,g,g,r,g,e,
-	o,o,o,r,o,r,o,o,
-	r,o,o,o,r,r,o,r
+	      e,e,e,e,e,e,e,e,
+       	e,e,e,e,e,e,e,e,
+      	e,e,e,e,e,e,e,e,
+	      e,e,e,g,g,e,e,e,
+      	e,e,g,g,g,g,e,e,
+       	r,g,g,g,g,r,g,e,
+       	o,o,o,r,o,r,o,o,
+      	r,o,o,o,r,r,o,r
 ]
 #################
 ### Easter Egg ##
@@ -207,43 +224,63 @@ running = True
 while running:
     for event in pygame.event.get():
         if event.type == KEYDOWN:
+          
+          
+          
 
-             if event.key == K_RIGHT:
-		num = random.randrange(0, 51)
-		if num == 3:
-			sense.clear();
-                	sense.set_pixels(right1)
-                	time.sleep(0.5)
-                	sense.set_pixels(right2)
-                	time.sleep(0.5)
-			sense.set_pixels(right3)
-			time.sleep(0.5)
+          if event.key == K_RIGHT:
+		               range_of_nums = range(1, 51)
+		               num = random.choice(range_of_nums)
+		               if (range_of_nums) != 3:
+		                 sense.clear()
+		                 sense.set_pixels(right1)
+		                 time.sleep(0.5)
+		                 sense.set_pixels(right2)
+		                 time.sleep(0.5)
+		                 sense.set_pixels(right3)
+		                 time.sleep(0.5)
 	
-		else:
-		sense.clear();
-                	sense.set_pixels(fun)
-			
-
-        elif event.key == K_LEFT: 
+		               else:
+		                 sense.clear();
+		                 sense.set_pixels(fun)
+		                 
+          elif event.key == K_LEFT: 
+                key = left
                 sense.clear()
-               	sense.set_pixels(left1)
-               	time.sleep(0.5)
-               	sense.set_pixels(left2)
-               	time.sleep(0.5)
-		sense.set_pixels(left3)
-		time.sleep(0.5)
+                sense.set_pixels(left1)
+                time.sleep(0.5)
+                sense.set_pixels(left2)
+                time.sleep(0.5)
+                sense.set_pixels(left3)
+                time.sleep(0.5)
 				
-	elif event.key == K_UP: 
-		sense.clear()
-		sense.set_pixels(up1)
-               	time.sleep(0.5)
-               	sense.set_pixels(up2)
-		time.sleep(0.5)
-		sense.set_pixels(up3)
-		time.sleep(0.5)
+          elif event.key == K_UP: 
+                key = up
+                sense.clear()
+                sense.set_pixels(up1)
+                time.sleep(0.5)
+                sense.set_pixels(up2)
+                time.sleep(0.5)
+                sense.set_pixels(up3)
+                time.sleep(0.5)
+		
+          elif event.key == K_F:
+	              sense.clear()
+	              sense.set_pixels(up1)
+		
+			
+		 
+          elif event.key == K_DOWN: 
+	              key = down
+	              sense.clear()
+	              sense.set_pixels(down1)
+	              time.sleep(0.5)
+	              sense.set_pixels(down2)
+	              time.sleep(0.5)
+	              sense.set_pixels(down3)
+	              time.sleep(0.5)
 
 
 
     if event.type == QUIT:
-        running = False
-	print("CYA!!! <3")
+        running = false
