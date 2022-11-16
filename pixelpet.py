@@ -23,7 +23,7 @@ import pygame
 from pygame import *
 from sense_hat import SenseHat
 import time
-import random
+from random import random
 
 ##################
 ### Initiation ###
@@ -66,7 +66,7 @@ down1 = [
 down2 = [   
          b,b,b,b,b,b,b,b,                                                   
          b,b,b,b,b,b,b,b, 
-	 b,b,b,b,b,b,b,b,
+	       b,b,b,b,b,b,b,b,
          b,b,g,g,g,g,b,b,                                          
          b,b,b,b,b,b,b,b,
          g,p,g,g,g,g,p,g,                                                  
@@ -157,7 +157,7 @@ left3 = [
         y,e,g,g,g,g,e,e,
         e,g,w,g,e,g,g,e,
         e,g,e,g,w,g,g,e,
-        e,g,g,g,g,g,g,e
+        e,g,g,g,g,g,g,e,
         g,g,g,g,g,g,g,g,
         g,g,g,g,g,g,g,g
 ]
@@ -180,7 +180,7 @@ right1 = [
 ]
 
 right2 = [
-	e,e,g,g,g,g,g,e,
+	      e,e,g,g,g,g,g,e,
         e,g,e,g,g,e,g,e,
         e,g,b,g,g,b,g,g,
         e,g,g,g,g,g,g,e,
@@ -191,14 +191,14 @@ right2 = [
 ]
 
 right3 = [
-	e,e,e,e,e,e,e,e,
-	e,e,e,e,e,e,e,e,
-	e,e,e,e,e,e,e,e,
-	e,e,e,g,g,e,e,e,
-	e,e,g,g,g,g,e,e,
-	r,g,g,g,g,r,g,e,
-	o,o,o,r,o,r,o,o,
-	r,o,o,o,r,r,o,r
+	      e,e,e,e,e,e,e,e,
+       	e,e,e,e,e,e,e,e,
+      	e,e,e,e,e,e,e,e,
+	      e,e,e,g,g,e,e,e,
+      	e,e,g,g,g,g,e,e,
+       	r,g,g,g,g,r,g,e,
+       	o,o,o,r,o,r,o,o,
+      	r,o,o,o,r,r,o,r
 ]
 #################
 ### Easter Egg ##
@@ -220,89 +220,67 @@ fun = [
 ################
 
 running = True
-sense.show_message("Hi. This is Blobby, a Blob.")
-
-sense.clear()
-sense.set_pixels(right1)
-sense.show_message("In this little prgram, you can use the UP, DOWN, LEFT and RIGHT keys to interact with Blobby. If you want to pay respects, press f. If you want to see this program's license, press w. Enjoy!")
 
 while running:
     for event in pygame.event.get():
         if event.type == KEYDOWN:
+          
+          
+          
 
-             if event.key == K_RIGHT:
-		key = right
-		num = random.randrange(0, 51)
-		if num != 3:
-			sense.clear()
-                	sense.set_pixels(right1)
-                	time.sleep(0.5)
-                	sense.set_pixels(right2)
-                	time.sleep(0.5)
-			sense.set_pixels(right3)
-			time.sleep(0.5)
+          if event.key == K_RIGHT:
+		               range_of_nums = range(1, 51)
+		               num = random.choice(range_of_nums)
+		               if (range_of_nums) != 3:
+		                 sense.clear()
+		                 sense.set_pixels(right1)
+		                 time.sleep(0.5)
+		                 sense.set_pixels(right2)
+		                 time.sleep(0.5)
+		                 sense.set_pixels(right3)
+		                 time.sleep(0.5)
 	
-		else:
-		sense.clear();
-                	sense.set_pixels(fun)
-			
-
-        elif event.key == K_LEFT: 
-		key = left
+		               else:
+		                 sense.clear();
+		                 sense.set_pixels(fun)
+		                 
+          elif event.key == K_LEFT: 
+                key = left
                 sense.clear()
-               	sense.set_pixels(left1)
-               	time.sleep(0.5)
-               	sense.set_pixels(left2)
-               	time.sleep(0.5)
-		sense.set_pixels(left3)
-		time.sleep(0.5)
+                sense.set_pixels(left1)
+                time.sleep(0.5)
+                sense.set_pixels(left2)
+                time.sleep(0.5)
+                sense.set_pixels(left3)
+                time.sleep(0.5)
 				
-	elif event.key == K_UP: 
-		key = up
-		sense.clear()
-		sense.set_pixels(up1)
-               	time.sleep(0.5)
-               	sense.set_pixels(up2)
-		time.sleep(0.5)
-		sense.set_pixels(up3)
-		time.sleep(0.5)
+          elif event.key == K_UP: 
+                key = up
+                sense.clear()
+                sense.set_pixels(up1)
+                time.sleep(0.5)
+                sense.set_pixels(up2)
+                time.sleep(0.5)
+                sense.set_pixels(up3)
+                time.sleep(0.5)
 		
-	elif event.key == K_f:
-		sense.clear()
-		sense.set_pixels(respect)
-		if key == up:
-			sense.clear()
-			sense.set_pixels(up1)
-           	    	time.sleep(0.5)
-       	        	sense.set_pixels(up2)
-			time.sleep(0.5)
-			sense.set_pixels(up3)
-			time.sleep(0.5)
-			
-		if key == left:
-			key = left
-	                sense.clear()
-        	       	sense.set_pixels(left1)
-      	         	time.sleep(0.5)
-    	    	       	sense.set_pixels(left2)
-        	       	time.sleep(0.5)
-			sense.set_pixels(left3)
-			time.sleep(0.5)
+          elif event.key == K_F:
+	              sense.clear()
+	              sense.set_pixels(up1)
 		
 			
-		
-	elif event.key == K_DOWN: 
-		key = down
-		sense.clear()
-		sense.set_pixels(down1)
-               	time.sleep(0.5)
-               	sense.set_pixels(down2)
-		time.sleep(0.5)
-		sense.set_pixels(down3)
-		time.sleep(0.5)
+		 
+          elif event.key == K_DOWN: 
+	              key = down
+	              sense.clear()
+	              sense.set_pixels(down1)
+	              time.sleep(0.5)
+	              sense.set_pixels(down2)
+	              time.sleep(0.5)
+	              sense.set_pixels(down3)
+	              time.sleep(0.5)
 
 
 
     if event.type == QUIT:
-        running = False
-	print("Blobby want to say bye. He's done with your bull****.)
+        running = false
