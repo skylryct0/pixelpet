@@ -1,3 +1,20 @@
+#Sky's Pixel Pet
+#Copyright (C) 2022 Skyler Sage T
+
+#This program is free software: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+
+#This program is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+
+#You should have received a copy of the GNU General Public License
+#along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
 #################
 ### Libraries ###
 #################
@@ -203,15 +220,21 @@ fun = [
 ################
 
 running = True
+sense.show_message("Hi. This is Blobby, a Blob.")
+
+sense.clear()
+sense.set_pixels(right1)
+sense.show_message("In this little prgram, you can use the UP, DOWN, LEFT and RIGHT keys to interact with Blobby. If you want to pay respects, press f. If you want to see this program's license, press w. Enjoy!")
 
 while running:
     for event in pygame.event.get():
         if event.type == KEYDOWN:
 
              if event.key == K_RIGHT:
+		key = right
 		num = random.randrange(0, 51)
-		if num == 3:
-			sense.clear();
+		if num != 3:
+			sense.clear()
                 	sense.set_pixels(right1)
                 	time.sleep(0.5)
                 	sense.set_pixels(right2)
@@ -225,6 +248,7 @@ while running:
 			
 
         elif event.key == K_LEFT: 
+		key = left
                 sense.clear()
                	sense.set_pixels(left1)
                	time.sleep(0.5)
@@ -234,6 +258,7 @@ while running:
 		time.sleep(0.5)
 				
 	elif event.key == K_UP: 
+		key = up
 		sense.clear()
 		sense.set_pixels(up1)
                	time.sleep(0.5)
@@ -241,9 +266,43 @@ while running:
 		time.sleep(0.5)
 		sense.set_pixels(up3)
 		time.sleep(0.5)
+		
+	elif event.key == K_f:
+		sense.clear()
+		sense.set_pixels(respect)
+		if key == up:
+			sense.clear()
+			sense.set_pixels(up1)
+           	    	time.sleep(0.5)
+       	        	sense.set_pixels(up2)
+			time.sleep(0.5)
+			sense.set_pixels(up3)
+			time.sleep(0.5)
+			
+		if key == left:
+			key = left
+	                sense.clear()
+        	       	sense.set_pixels(left1)
+      	         	time.sleep(0.5)
+    	    	       	sense.set_pixels(left2)
+        	       	time.sleep(0.5)
+			sense.set_pixels(left3)
+			time.sleep(0.5)
+		
+			
+		
+	elif event.key == K_DOWN: 
+		key = down
+		sense.clear()
+		sense.set_pixels(down1)
+               	time.sleep(0.5)
+               	sense.set_pixels(down2)
+		time.sleep(0.5)
+		sense.set_pixels(down3)
+		time.sleep(0.5)
 
 
 
     if event.type == QUIT:
         running = False
-	print("CYA!!! <3")
+	print("Blobby want to say bye. He's done with your bull****.)
