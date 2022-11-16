@@ -23,7 +23,7 @@ import pygame
 from pygame import *
 from sense_hat import SenseHat
 import time
-from random import random
+from random import randrange
 
 ##################
 ### Initiation ###
@@ -45,6 +45,7 @@ r = (255, 0, 0) #red
 o = (255, 75, 75)
 y = (204, 204, 0) #yellow
 b = (0, 0, 0) #black
+l = (0, 0, 255) #blue
 #lord almighty forgive me for the extra var ;-;
 e = (0, 0, 0) #empty
 
@@ -118,7 +119,7 @@ up3 = [
         b,b,g,g,g,g,b,b,
         b,g,w,g,g,w,g,b,
         b,g,b,g,g,b,g,b,
-        b,g,g,g,g,l,g,b,
+        b,g,g,g,g,g,g,b,
         g,g,g,g,g,g,g,g,
         g,g,g,g,g,g,g,g
         ]
@@ -229,9 +230,9 @@ while running:
           
 
           if event.key == K_RIGHT:
-		               range_of_nums = range(1, 51)
-		               num = random.choice(range_of_nums)
-		               if (range_of_nums) != 3:
+		               
+		               nums = randrange(51)
+		               if (nums) != 3:
 		                 sense.clear()
 		                 sense.set_pixels(right1)
 		                 time.sleep(0.5)
@@ -245,7 +246,7 @@ while running:
 		                 sense.set_pixels(fun)
 		                 
           elif event.key == K_LEFT: 
-                key = left
+                
                 sense.clear()
                 sense.set_pixels(left1)
                 time.sleep(0.5)
@@ -255,7 +256,7 @@ while running:
                 time.sleep(0.5)
 				
           elif event.key == K_UP: 
-                key = up
+                
                 sense.clear()
                 sense.set_pixels(up1)
                 time.sleep(0.5)
@@ -264,14 +265,12 @@ while running:
                 sense.set_pixels(up3)
                 time.sleep(0.5)
 		
-          elif event.key == K_F:
-	              sense.clear()
-	              sense.set_pixels(up1)
+          
 		
 			
 		 
           elif event.key == K_DOWN: 
-	              key = down
+	              
 	              sense.clear()
 	              sense.set_pixels(down1)
 	              time.sleep(0.5)
@@ -282,5 +281,5 @@ while running:
 
 
 
-    if event.type == QUIT:
+if event.type == QUIT:
         running = false
