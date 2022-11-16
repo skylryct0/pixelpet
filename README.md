@@ -1,7 +1,7 @@
 
 # Sky's Pixel Pet
 
-I am very done with this :)
+I am very done with this :) Its for school btw any of my friends wondering
 
 
 ## Acknowledgements
