@@ -32,3 +32,4 @@ The code is the documentation.
 - f key to pay respects
 - w key to print the license
 
+##template: sky
