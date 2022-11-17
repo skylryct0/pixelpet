@@ -1,3 +1,4 @@
+
 #Sky's Pixel Pet
 #Copyright (C) 2022 Skyler Sage T
 
@@ -266,12 +267,10 @@ while running:
                 time.sleep(0.5)
                 
 		      elif event.key == K_f:
-		        sense.clear()
-		        sense.show_message("F for Respects")
+		            sense.clear()
+		            sense.show_message("F for Respects")
 		        
           elif event.key == K_w:
-            
-            
             sense.clear()
             sense.show_message("GPL v3. See github repo. Sorry Stallman", text_colour=[255, 0, 0])
 		
