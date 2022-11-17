@@ -23,7 +23,7 @@ I am very done with this :) Its for school btw any of my friends wondering
 
 ## Documentation
 
-The code is the documentation. If you want a reflection though, see REFLECTION.md.
+The code is the documentation. 
 
 
 ## Usage/Examples
