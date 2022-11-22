@@ -23,6 +23,6 @@ elif [[ "$OSTYPE" == "win32" ]]; then
 elif [[ "$OSTYPE" == "freebsd"* ]]; then
         echo "based. pls have a good rest of ur day, ma'am/sir/ya boi/person :)"
 else
-        "wtf"
+        echo "wtf"
 fi
 
